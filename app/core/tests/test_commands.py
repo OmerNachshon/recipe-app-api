@@ -1,3 +1,4 @@
+# flake8: noqa
 """"test custom django management commands"""
 
 from unittest.mock import patch
@@ -12,7 +13,7 @@ from django.test import SimpleTestCase
 class CommandTests(SimpleTestCase):
     """test commands"""
 
-    def test_wait_for_db_ready(self,patched_check):
+    def test_wait_for_db_ready(self, patched_check):
         """test waiting for db"""
         patched_check.return_value = True
         call_command('wait_for_db')
